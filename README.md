@@ -13,4 +13,4 @@
 13. 접근 제어자 (Access Modifiers)
 14. static 키워드
 15. final 키워드
-16. 중첩 클래스 [작성중]
+16. 중첩 클래스
