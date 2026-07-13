@@ -1,4 +1,4 @@
-package oop.h_objectLifecycle.one_ClassLoad;
+package oop.h_objectLifecycle.a_ClassLoad;
 // 1. ClassLoading : 객체를 만들기 전에 먼저 일어나는 과정
 
 // java.lang.Class 객체 생성

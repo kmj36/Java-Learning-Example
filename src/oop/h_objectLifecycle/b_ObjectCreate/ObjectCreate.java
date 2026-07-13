@@ -1,8 +1,10 @@
-package oop.h_objectLifecycle.two_ObjectCreate;
+package oop.h_objectLifecycle.b_ObjectCreate;
 // 2. Object Create : 객체를 만들기 전에 먼저 일어나는 과정
 
+import java.io.Serializable;
+
 // 모든 객체는 Heap 메모리에 생성됨.
-class Clock {
+class Clock implements Serializable {
     public static final String VERSION;
     public static int Loglevel;
 

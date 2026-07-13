@@ -1,0 +1,22 @@
+package oop.l_Encapsulation.c_WriteOnly;
+
+class Person {
+    private String name;
+    private int age;
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+}
+
+public class WriteOnly {
+    static void main() {
+        Person p = new Person();
+        p.setAge(22);
+        p.setName("Catalina");
+    }
+}
