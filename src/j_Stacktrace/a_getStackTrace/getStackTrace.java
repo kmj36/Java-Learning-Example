@@ -9,13 +9,13 @@ public class getStackTrace {
             arr[5] = 10;
         } catch (Exception cause) {
             StackTraceElement[] elements = cause.getStackTrace();
-            Arrays.stream(elements)
-                    .forEach(element -> System.err.printf("%s:%d>> %s() \n",
-                        element.getFileName(),
-                        element.getLineNumber(),
-                        element.getMethodName()
-                        )
-                    );
+            Arrays.stream(elements).forEach(element ->
+                    System.err.printf("%s:%d>> %s() \n",
+                            element.getFileName(),
+                            element.getLineNumber(),
+                            element.getMethodName()
+                    )
+            );
         }
     }
 }

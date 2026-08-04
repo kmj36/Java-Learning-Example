@@ -3,7 +3,7 @@ package j_Stacktrace.b_printStackTrace;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 
-class printStack_w {
+class printStackTrace_w {
     static void main(String[] args) {
         try {
             int[] arr = new int[3];
@@ -15,7 +15,7 @@ class printStack_w {
             e.printStackTrace(pw);
             String traceAsString = sw.toString();
 
-            System.out.print(traceAsString);
+            System.out.print("trace: " + traceAsString);
         }
     }
 }

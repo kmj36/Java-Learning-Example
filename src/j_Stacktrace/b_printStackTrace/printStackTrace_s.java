@@ -5,7 +5,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
 
-public class printStackTrace {
+class printStackTrace_s {
     static void main(String[] args) throws IOException {
         try {
             int[] a = new int[2];
