@@ -1,0 +1,3 @@
+- PrintStream -
+Hello, World!
+숫자: 256, 실수: 0.39

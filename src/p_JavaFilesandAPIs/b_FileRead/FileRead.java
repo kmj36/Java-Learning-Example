@@ -6,6 +6,8 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.List;
+import java.util.stream.Stream;
 
 public class FileRead {
     static void main(String[] args) throws IOException {
@@ -13,18 +15,15 @@ public class FileRead {
         Path p = Path.of(FilePath);
 
         // BufferedReader
-
         try(BufferedReader Br = new BufferedReader(new FileReader(FilePath))) {
-            int data;
+            String line;
 
-            System.out.println("[BufferedReader]");
-            while((data = Br.read()) != -1) {
-                System.out.printf("%c", data);
+            System.out.println("[BufferedReader.read()]");
+            while((line = Br.readLine()) != null) {
+                System.out.println(line);
             }
             System.out.println();
         }
-
-        System.out.println();
 
         // Files.readAllBytes(path)
         try {
@@ -32,6 +31,36 @@ public class FileRead {
 
             System.out.println("[Files.readAllBytes(path)]");
             System.out.println(new String(data, StandardCharsets.UTF_8));
+            System.out.println();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+        // Files.lines(path)
+        try(Stream<String> lines = Files.lines(p)) {
+            System.out.println("[Files.lines(path)]");
+            lines.forEach((line) -> {
+                System.out.println(line);
+            });
+            System.out.println();
+        }
+
+        // Files.readAllLines(path)
+        try {
+            System.out.println("[Files.readAllLines(path)]");
+            List<String> list = Files.readAllLines(p);
+            for(String line : list) {
+                System.out.println(line);
+            }
+            System.out.println();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+        try {
+            System.out.println("[Files.readString(path)]");
+            String fileText = Files.readString(p);
+            System.out.print(fileText);
             System.out.println();
         } catch (IOException e) {
             throw new RuntimeException(e);
