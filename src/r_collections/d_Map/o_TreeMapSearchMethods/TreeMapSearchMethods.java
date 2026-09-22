@@ -21,5 +21,7 @@ public class TreeMapSearchMethods {
 
         System.out.printf("map.pollFirstEntry(): %s%n", map.pollFirstEntry());
         System.out.printf("map.pollLastEntry(): %s%n", map.pollLastEntry());
+
+        System.out.printf("map: %s%n", map);
     }
 }
