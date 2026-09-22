@@ -1,4 +1,4 @@
-package r_collections.d_Map.n_functional;
+package r_collections.d_Map.m_functional;
 
 import java.util.*;
 
