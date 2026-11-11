@@ -1,8 +1,4 @@
-package s_concurrency.b_RaceCondition.m_ResovingRaceConditions;
-
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.atomic.AtomicInteger;
-import java.util.concurrent.locks.ReentrantLock;
+package s_concurrency.b_RaceCondition.m_ResovingRaceConditions.a_StandardResolves;
 
 class Counter {
     private int count = 0;

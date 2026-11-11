@@ -1,4 +1,4 @@
-package s_concurrency.b_RaceCondition;
+package s_concurrency.b_RaceCondition.m_ResovingRaceConditions.b_EAFPExample;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -6,7 +6,7 @@ import java.nio.file.Path;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class n_EAFPExample {
+public class EAFPExample {
     static void main(String[] args) throws IOException, InterruptedException {
         Path p = Path.of("lock.tmp");
         Files.deleteIfExists(p);
